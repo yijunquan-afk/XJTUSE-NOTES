@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rc4" options="--add-exports java.xml/com.sun.org.apache.xerces.internal.impl.dv.util=ALL-UNNAMED" />
+    </option>
+  </component>
+</project>
