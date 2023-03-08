@@ -2,6 +2,8 @@
 
 # XJTUSE专业课与实验指南
 
+觉得有用的话可以点个star
+
 > :page_facing_up:<mark>写在前面</mark>
 >
 > :one: 本篇文章仅供参考，切勿无端联想，特此说明！
