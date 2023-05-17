@@ -1,5 +1,4 @@
-[TOC]
-
+@[toc]
 # Linux操作系统实践——Samba服务器搭建
 
 <font color="red" size=5>**仅供参考，谢绝抄袭**</font>
@@ -44,17 +43,18 @@
 
 ③  teacher组中有所有的教师：teacher，服务于教师
 
-![image-20220325200000679](C:/Users/26969/AppData/Roaming/Typora/typora-user-images/image-20220325200000679.png)                               
+![\[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-hcAOgDTc-1648305528719)(C:/Users/26969/AppData/Roaming/Typora/typora-user-images/image-20220325200000679.png)\]](https://img-blog.csdnimg.cn/d681a1e5a93f4ca9b5b60bc35b8bbd11.png)
+                               
 
 #### 3) 系统文件权限设计说明
 
 作业管理所用的文件都在linux系统的/home/class目录下，一共有三个目录homework，grade，learning，三个文件grade-count.sh，grade-calculate.sh，grade_log.log
 
-①  **homework**目录**：用于学生上传作业和教师下载学生作业。该目录的权限设置未6777，其中6设置了s权限使得学生上传文件的组和homework一致，都是teacher，这是为了**保证学生不能下载其他学生的作业。该目录的拥有者为teacher。而学生上传文件的权限被设置为750，即上传者学生可以管理自己的作业，但是不能下载或查看其他学生；而教师可以下载学生的作业，但是不能更改学生的作业。
+①  **homework**目录：用于学生上传作业和教师下载学生作业。该目录的权限设置为6777，其中6设置了s权限使得学生上传文件的组和homework一致，都是teacher，这是为了保证学生不能下载其他学生的作业。该目录的拥有者为teacher。而学生上传文件的权限被设置为750，即上传者学生可以管理自己的作业，但是不能下载或查看其他学生；而教师可以下载学生的作业，但是不能更改学生的作业。
 
-②  **learning目录**：用于教师上传学习资料以及学生可以下载学习资料。该目录的权限设置未6750，其中6设置了s权限使得教师上传文件的组和learningk一致，都是os， 而该目录的拥有者为teacher。教师上传的资料的权限被设置为750，保证学生可以下载文件但是无法修改文件，教师可以任意管理上传学习资料。
+②  **learning目录**：用于教师上传学习资料以及学生可以下载学习资料。该目录的权限设置为6750，其中6设置了s权限使得教师上传文件的组和learning一致，都是os， 而该目录的拥有者为teacher。教师上传的资料的权限被设置为750，保证学生可以下载文件但是无法修改文件，教师可以任意管理上传学习资料。
 
-③  **grade目录**：用于教师统计学生交作业名单以及录入成绩。该目录的权限设置未6750，其中6设置了s权限使得教师上传文件的组和grade一致，都是os， 而该目录的拥有者为teacher。目录中的文件权限都被设置为750，保证学生可以下载交作业名单与成绩，可以下载作业模板和答案（**答案会在交作业时间截止后由教师上传**），教师可以任意管理上传文件。
+③  **grade目录**：用于教师统计学生交作业名单以及录入成绩。该目录的权限设置为6750，其中6设置了s权限使得教师上传文件的组和grade一致，都是os， 而该目录的拥有者为teacher。目录中的文件权限都被设置为750，保证学生可以下载交作业名单与成绩，可以下载作业模板和答案（**答案会在交作业时间截止后由教师上传**），教师可以任意管理上传文件。
 
 > correct.txt：作业的正确答案
 >
@@ -78,11 +78,11 @@
 
 ③  利用for循环统计homework目录下的所有文件，每有一个文件，count就+1，最后得到所有的交作业学生信息和总数
 
-![image-20220326222526120](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222526120.png)
+![image-20220326222526120](https://img-blog.csdnimg.cn/img_convert/4f1acc7edcc1db93839be5ff9b938533.png)
 
 然后再利用crond进程定时执行该脚本，这里我设置为每天的23：59统计一次交作业名单
 
-![image-20220326222542132](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222542132.png)
+![image-20220326222542132](https://img-blog.csdnimg.cn/img_convert/5c0dcdce8268a6f67ca3813c42d29532.png)
 
 而且记录了脚本执行日志。
 
@@ -91,8 +91,8 @@
 该脚本名称为grade-calculate.sh
 
 这里我测试使用的作业格式如下：
+![<img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326222604789.png" alt="image-20220326222604789" style="zoom:67%;float:left" />](https://img-blog.csdnimg.cn/c28d86493796468499edd443a41fb77f.png)
 
-<img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326222604789.png" alt="image-20220326222604789" style="zoom:67%;float:left" />
 
 其中开头的#standard template用于区别是否使用指定格式的作业，每一道题都以数字+.+答案为格式，因此可以设计脚本如下：
 
@@ -106,7 +106,8 @@
 
 ⑤  将遍历得到的分数利用流编辑器sed加入到每一个学生作业记录的后面
 
- <img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326222640928.png" alt="image-20220326222640928" style="zoom:80%;" />
+![在这里插入图片描述](https://img-blog.csdnimg.cn/b0ae3cb90db045899d3b7f9479a4446e.png)
+
 
 ## 四、   配置文件关键修改处的说明及运行情况
 
@@ -150,13 +151,13 @@ force create mode = 0750:
 
 cat /etc/group
 
-![image-20220326222812778](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222812778.png)                    
+![image-20220326222812778](https://img-blog.csdnimg.cn/img_convert/4ed5cc18741bd7a7067dfe54d25023bd.png)                    
 
 #### 2)   /home/class/下相关文件
 
 tree /home/class/
 
- ![image-20220326222832310](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222832310.png)
+ ![image-20220326222832310](https://img-blog.csdnimg.cn/img_convert/708276cf4b9f89b3d408dd003ff9fb03.png)
 
 #### 3)   学生上传作业（Linux系统下）
 
@@ -164,39 +165,37 @@ tree /home/class/
 
 **学生可以在/home/class/grade****下载作业模板**
 
-![image-20220326222858918](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222858918.png)   
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-FdzLt6kY-1648305528723)(http://r9awog79x.hn-bkt.clouddn.com/image-20220326222858918.png)]   
 
 **进入homework**目录
 
-![image-20220326222921656](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222921656.png) 
+![image-20220326222921656](https://img-blog.csdnimg.cn/img_convert/e16b422d0a23351c867ba95b9cbe489f.png) 
 
 **查看当前作业目录**
 
- ![image-20220326222939071](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222939071.png)
+ ![image-20220326222939071](https://img-blog.csdnimg.cn/img_convert/a298e5b685832410a910d074c55e42f2.png)
 
 **上传作业成功**
 
- ![image-20220326222952909](http://r9awog79x.hn-bkt.clouddn.com/image-20220326222952909.png)
+ ![image-20220326222952909](https://img-blog.csdnimg.cn/img_convert/be36124cc6df7febb16dbaafd13c1fef.png)
 
 **无法下载他人作业**
 
- ![image-20220326223011879](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223011879.png)
+ ![image-20220326223011879](https://img-blog.csdnimg.cn/img_convert/8322972a42e4595d31fbfae035dd196b.png)
 
 #### 4)   学生上传作业（Windows系统下）——接下来大部分操作都在Windows下进行
 
 在Windows系统进入[\\192.168.114.130](file://192.168.114.130)，输入账号密码
 
- <img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326223054214.png" alt="image-20220326223054214" style="zoom:67%;" />
+ ![<img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326223054214.png" alt="image-20220326223054214" style="zoom:67%;" />](https://img-blog.csdnimg.cn/0501e0e9be5945b681fc1f78a5109d92.png)
 
 进入到共享文件夹下
-
-<img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326223118352.png" alt="image-20220326223118352" style="zoom:67%;" /> 
-
+![<img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326223118352.png" alt="image-20220326223118352" style="zoom:67%;" />](https://img-blog.csdnimg.cn/464be1c9fe93490ea876089e269281e0.png)
 上传作业
+![<img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326223144427.png" alt="image-20220326223144427" style="zoom:50%;" />](https://img-blog.csdnimg.cn/170a133a01214609929a957ad0d26152.png)
 
- <img src="http://r9awog79x.hn-bkt.clouddn.com/image-20220326223144427.png" alt="image-20220326223144427" style="zoom:50%;" />
 
- 
+
 
 #### 5)   查看脚本统计交作业名单
 
@@ -204,25 +203,25 @@ tree /home/class/
 
 **在Windows**系统进入\\\192.168.114.130
 
- ![image-20220326223453813](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223453813.png)
+ ![image-20220326223453813](https://img-blog.csdnimg.cn/img_convert/c5cc95cd1e8997ba10ef59d7143a17ee.png)
 
 **进入grade**文件夹可以看到统计名单grade.txt
 
- ![image-20220326223511512](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223511512.png)
+ ![image-20220326223511512](https://img-blog.csdnimg.cn/img_convert/e42a5208ca771775b8f7014cbee9f96e.png)
 
 **也可以下载到自己的电脑中**
 
- ![image-20220326223546130](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223546130.png)
+ ![image-20220326223546130](https://img-blog.csdnimg.cn/img_convert/87a1e15a87613fcb9598a2bc32d40785.png)
 
 #### 6)   教师使用脚本批改指定格式的作业
 
 在Linux系统下启动grade-calculate.sh脚本
 
- ![image-20220326223600755](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223600755.png)
+ ![image-20220326223600755](https://img-blog.csdnimg.cn/img_convert/56f578f5829b48b191fda2271f4b2fe8.png)
 
 可以看到自动批改后的交作业名单
 
- ![image-20220326223615029](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223615029.png)
+ ![image-20220326223615029](https://img-blog.csdnimg.cn/img_convert/89f73738bec64971b01cedc0f58b5c57.png)
 
 因为stu3没有按照格式提交作业，所以系统没有计算他的成绩
 
@@ -230,34 +229,34 @@ tree /home/class/
 
 教师可以查看学生的作业
 
- ![image-20220326223637470](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223637470.png)
+ ![image-20220326223637470](https://img-blog.csdnimg.cn/img_convert/b4497e5a772f76beb083d7efc1fe586a.png)
 
 看完以后，可以手动输入stu3的成绩
 
- ![image-20220326223654370](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223654370.png)
+ ![image-20220326223654370](https://img-blog.csdnimg.cn/img_convert/71070ba114c87a16286951444c80e3b6.png)
 
 #### 8)   学生查看成绩与答案
 
 stu1进入文件夹grade中可以查看grade.txt从而看到自己的成绩
 
- ![image-20220326223706888](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223706888.png)
+ ![image-20220326223706888](https://img-blog.csdnimg.cn/img_convert/0b41c55a7e447aca9f0d40fd3ac7746a.png)
 
 也可以查看correct.txt查看答案
 
- ![image-20220326223724761](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223724761.png)
+ ![image-20220326223724761](https://img-blog.csdnimg.cn/img_convert/c1ca9ab6e2887d6cd709311d3ec3955c.png)
 
 #### 9)   教师上传学习资料
 
 教师可以将学习资料上传到learning文件夹下
 
-![image-20220326223754277](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223754277.png) 
+![image-20220326223754277](https://img-blog.csdnimg.cn/img_convert/de7d1c5e094c4ffad482c566972cdddc.png) 
 
 #### 10)  学生下载学习资料
 
 stu1进入文件夹learning中可以下载学习资料
 
- ![image-20220326223812645](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223812645.png)
+ ![image-20220326223812645](https://img-blog.csdnimg.cn/img_convert/ca199fd477d98a00be6951846e41fa5d.png)
 
 无法上传学习资料
 
-![image-20220326223825038](http://r9awog79x.hn-bkt.clouddn.com/image-20220326223825038.png)
+![image-20220326223825038](https://img-blog.csdnimg.cn/img_convert/168b2155dbad6307baed305319c83659.png)
