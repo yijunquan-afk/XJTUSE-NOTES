@@ -1,4 +1,4 @@
-[TOC]
+
 
 # 第十三章 I/O系统
 
@@ -73,7 +73,7 @@ I/O设备类型繁多，从OS观点看，其性能指标有：
 
 若控制器可连接多个设备时，则应具有多个设备地址，使每一个地址对应一个设备
 
-![image-20211222214715761](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211222214715761.png)
+![image-20211222214715761](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211222214715761.png)
 
 ### I/O通道
 
@@ -81,11 +81,11 @@ I/O设备类型繁多，从OS观点看，其性能指标有：
 
 **目的**：建立独立的I/O操作，不仅**使数据的传送独立于CPU**，而且使有关对I/O操作的组织、管理及其结束处理也尽量独立，即把CPU从繁杂的I/O任务中解脱出来，提高CPU与设备，设备与设备之间的并行工作能力. 、
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211222214823420.png" alt="image-20211222214823420" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211222214823420.png" alt="image-20211222214823420" style="zoom:50%;" />
 
 由于通道价格昂贵，致使机器中所设置的通道数量势必较少，这又往往使它成为I/O 的瓶颈，造成整个系统吞吐量的下降。 
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211222215101983.png" alt="image-20211222215101983" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211222215101983.png" alt="image-20211222215101983" style="zoom:67%;" />
 
 ## I/O控制方式
 
@@ -133,11 +133,9 @@ DMA方式的特点是：
 >
 > **提高CPU和I/O设备之间的并行性** 
 
-> 
-
 OS提供以下几种缓冲形式：单缓冲、双缓冲、循环缓冲、缓冲池
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211222222207252.png" alt="image-20211222222207252" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211222222207252.png" alt="image-20211222222207252" style="zoom:50%;" />
 
 缓冲池（Buffer Pool）的组成 ：
 
@@ -165,7 +163,7 @@ OS提供以下几种缓冲形式：单缓冲、双缓冲、循环缓冲、缓冲
 >
 > 提取输出缓冲区； 
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211222222500057.png" alt="image-20211222222500057" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211222222500057.png" alt="image-20211222222500057" style="zoom:60%;" />
 
 ## I/O软件
 
@@ -197,7 +195,7 @@ I/O软件组织成以下4个层次：
 >
 > (4)中断处理程序
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211222224318393.png" alt="image-20211222224318393" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211222224318393.png" alt="image-20211222224318393" style="zoom:67%;" />
 
 ## 设备分配
 
@@ -219,7 +217,7 @@ I/O软件组织成以下4个层次：
 >
 > > 整个系统有一张系统设备表
 
-![image-20211125142402239](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211125142402239.png)
+![image-20211125142402239](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211125142402239.png)
 
 为了使系统有条不紊地工作，系统在进行设备分配时，应考虑这样几个因素：
 
@@ -290,7 +288,7 @@ LUT的设置可采取两种方式
 >
 > 多用户系统可为每个用户设置一张LUT 
 
-![image-20211125143617795](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211125143617795.png)
+![image-20211125143617795](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211125143617795.png)
 
 
 
@@ -316,7 +314,7 @@ SPOOLing：
 
 SPOOLing系统是对脱机输入、输出工作的模拟，它必须有高速随机外存的支持，这通常是采用磁盘。
 
-SPOOLing系统组成如下图：
+SPOOLing系统组成如下：
 
 > 输入井和输出井；
 >
@@ -324,7 +322,6 @@ SPOOLing系统组成如下图：
 >
 > 输入进程和输出进程。
 >
-> ![image-20211125144647090](C:/Users/26969/AppData/Roaming/Typora/typora-user-images/image-20211125144647090.png)
 
 #### 实现
 
@@ -359,7 +356,7 @@ SPOOLing技术可将一台打印机改造成一台可供多个用户共享的设
 
 **处理过程**
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211125150444380.png" alt="image-20211125150444380" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211125150444380.png" alt="image-20211125150444380" style="zoom:67%;" />
 
 ### 中断处理程序
 

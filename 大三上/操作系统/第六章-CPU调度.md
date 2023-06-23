@@ -1,8 +1,6 @@
-[TOC]
+
 
 # 第六章 CPU调度
-
-![第六章 CPU调度](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/%E7%AC%AC%E5%85%AD%E7%AB%A0%20CPU%E8%B0%83%E5%BA%A6.png)
 
 **高级(Long-term)调度——作业调度**
 
@@ -14,7 +12,7 @@
 
 **中级(Medium-term)调度——对换**
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211012163118655.png" alt="image-20211012163118655" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211012163118655.png" alt="image-20211012163118655" style="zoom:67%;" />
 
 ## 一、Basic Concepts  (基本概念）
 
@@ -26,7 +24,7 @@ CPU脉冲的分布,在系统中,存在许多短CPU脉冲,只有少量的长CPU�
 
 **CPU调度**：当CPU空闲时(当进程离开running状态时)，OS就选择**内存中**的某个就绪进程，并给其分配CPU
 
-![image-20211012163742438](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211012163742438.png)
+![image-20211012163742438](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211012163742438.png)
 
 CPU**调度的时机**：
 
@@ -93,7 +91,7 @@ FCFS算法属于**非抢占方式**:一旦一个进程占有处理机，它就�
 
 FCFS算法易于实现，表面上很公平，实际上**有利于长作业，不利于短作业；有利于CPU繁忙型，不利于I/O繁忙型**。
 
-![image-20211221192641664](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211221192641664.png)
+![image-20211221192641664](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211221192641664.png)
 
 ### Shortest-Job-First (SJF)短作业优先
 
@@ -109,7 +107,7 @@ SJF是最优的 – 对一组指定的进程而言，它给出了最短的平均
 
 <font color="red">**举例运算**</font>
 
-![image-20211012172102109](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211012172102109.png)
+![image-20211012172102109](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211012172102109.png)
 
 采用SJF**有利于系统减少平均周转时间,提高系统吞吐量。**
 
@@ -151,7 +149,7 @@ SJF是最优的 – 对一组指定的进程而言，它给出了最短的平均
 
 每个进程将得到小单位的CPU时间[时间片]，通常为10-100毫 秒。时间片用完后，该进程将被抢占并插入就绪队列末尾
 
-![image-20211012172922857](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211012172922857.png)
+![image-20211012172922857](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211012172922857.png)
 
 一般来说，RR的平均周转时间比SJF长，但**响应时间要短一些**
 
@@ -183,7 +181,7 @@ SJF是最优的 – 对一组指定的进程而言，它给出了最短的平均
 - 当一个进程执行完一个完整的时间片后被抢占处理器，被抢占的进程优先级**降低一级**而进入下级就绪队列，如此继续，直至降到进程的基本优先级。而一个进程从阻塞态变为就绪态时要提高优先级
 - 最后会将I/O型和交互式进程留在较高优先级队列
 
-![image-20211012173708040](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211012173708040.png)
+![image-20211012173708040](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211012173708040.png)
 
 Highest Response Ratio Next (HRRN)
 
@@ -211,9 +209,9 @@ RP值定义为：
 
 > 作业调度程序要统计作业的等待时间，**作浮点运算（这是系统程序最忌讳的）浪费大量的计算时间。**
 
-![image-20211221194238534](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211221194238534.png)
+![image-20211221194238534](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211221194238534.png)
 
-![image-20211221195129316](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211221195129316.png)
+![image-20211221195129316](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211221195129316.png)
 
 ## 四、Multiple-Processor Scheduling （多处理器调度）
 
@@ -288,7 +286,7 @@ Linux支持SMP,**每个CPU有自己的runqueue,并各自独立进行调度.**
 
 调度程序从Active array中选取优先级最高的进程使用CPU,当所有进程都用尽了自己的时间片,交换Active array与expired array
 
-![image-20211014144400258](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211014144400258.png)
+![image-20211014144400258](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img/image-20211014144400258.png)
 
 ## 七、Algorithm Evaluation （算法评估）
 
