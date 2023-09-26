@@ -26,6 +26,10 @@
 >
 > 参考：XJTUSE2019级软件工程专业课表
 
+> 西安交通大学软件学院学习指南：[https://github.com/Xjtuse-Guide/Xjtuse-Guide](https://github.com/Xjtuse-Guide/Xjtuse-Guide)
+>
+> 在线版本（查看图片需要翻墙）：[https://xjtuse-guide.github.io/Xjtuse-Guide/#/](https://xjtuse-guide.github.io/Xjtuse-Guide/#/)
+
 ## 大一小学期
 
 |                             课程                             | 任课老师 |       分数构成       | 讲课风格 | 难度 |
