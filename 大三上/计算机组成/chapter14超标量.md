@@ -26,7 +26,7 @@
 
 > 超标量就是对标量指令处理的一种加速
 
-![image-20211119114631200](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211119114631200.png)
+![image-20211119114631200](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704532.png)
 
 ### 超标量的特征
 
@@ -50,7 +50,7 @@
 >
 > 超级流水线是并发执行，物理上只有一条流水线，只是这条流水线性能更好，各个指令在处理时是部分交叠无法做到真正的同步
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211119115456639.png" alt="image-20211119115456639" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704536.png" alt="image-20211119115456639" style="zoom:67%;" />
 
 现代处理器往往采用超级流水线超标量技术
 
@@ -164,9 +164,9 @@ I1完成之前不能执行I2指令
 > > I5依赖于I4产生的值。
 > > I5和I6为使用同一功能单元而发生冲突。
 > >
-> > ![image-20211227102157808](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227102157808.png)
+> > ![image-20211227102157808](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704534.png)
 
-![image-20211124103830314](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211124103830314.png)
+![image-20211124103830314](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704535.png)
 
 指令是一次取两条并传送到译码单元。因为指令是成对取，所以下两条指令必须等待，直到译码流水段已完成上次所取指令的译码。为保证按序完成，当有功能单元冲突或功能单元产生结果需要不止一个周期时,指令发射必须停止。
 在这个例子中，由译码第一条指令到写回最后结果总共花费的时间是8个时钟周期。
@@ -175,7 +175,7 @@ I1完成之前不能执行I2指令
 
 目的是要执行和输出尽可能快，指令发出因资源冲突、数据依赖关系或过程依赖关系而停止，需要更复杂的指令发出逻辑和中断控制
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211124110637411.png" alt="image-20211124110637411" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704537.png" alt="image-20211124110637411" style="zoom:80%;" />
 
 #### 3、乱序发出乱序完成
 
@@ -183,7 +183,7 @@ I1完成之前不能执行I2指令
 
 当执行阶段中的功能单元变成可用时，需要此功能单元的指令就会由指令窗口发射到执行段。只要:one:**指令所需的具体功能单元是可用的,以及:two:没有冲突或相关性阻塞这条指令**,那任何指令都可以被发射。
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211124105246408.png" alt="image-20211124105246408" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704538.png" alt="image-20211124105246408" style="zoom:80%;" />
 
 指令窗口并不是一个真实的流水段，由寄存器组成
 
@@ -239,7 +239,7 @@ R7b:=R3c + R4b    (I4)
 
 能在超标量处理器中提高性能的三种硬件技术：资源复制、乱序发出和重命名。
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211124113322684.png" alt="image-20211124113322684" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704540.png" alt="image-20211124113322684" style="zoom:50%;" />
 
 没有寄存器重命名而添加功能单位可能不会很有价值；若指令窗口太小，数据相关性将妨碍额外功能单位的有效利用
 

@@ -8,7 +8,7 @@
 
 <mark>单位要记住</mark>
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211001221924587.png" alt="image-20211001221924587" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211001221924587.png" alt="image-20211001221924587" style="zoom:67%;" />
 
 ## 2.1 A Brief History of Computer
 
@@ -60,13 +60,13 @@
 >
 > 由控制单元操作的输入和输出设备
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211224160249716.png" alt="image-20211224160249716" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211224160249716.png" alt="image-20211224160249716" style="zoom:50%;" />
 
 #### 1）IAS存储格式
 
 The memory of the IAS consists of 1000 storage locations (called **words**字) of 40 bits each 包括数据与指令
 
-![image-20211001213500950](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211001213500950.png)
+![image-20211001213500950](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211001213500950.png)
 
 #### 2）IAS寄存器
 
@@ -92,7 +92,7 @@ The memory of the IAS consists of 1000 storage locations (called **words**字) o
 > 指令的执行永远从它开始，包含要从内存中提取的下一个指令的地址
 
 :six: Accumulator (AC) and multiplier quotient (MQ) **累加器(AC)和乘数商(MQ)**
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211001214537199.png" alt="image-20211001214537199" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211001214537199.png" alt="image-20211001214537199" style="zoom:50%;" />
 
 IAS让程序执行的过程：PC把下一条要执行的指令的地址放在MAR->MAR通知主存->主存把地址放入MBR暂存->MBR先把左指令分为操作码和地址码两部分->操作码放给IR，地址码放给MBR->然后是右指令->IR译码以后产生跟指令相关的控制信号，要计算的话给ALU进行计算，同时操作数的地址驱动主存取数据->然后将结果暂存在MBR->主存从MBR取结果储存->程序执行结束，PC+1
 
@@ -205,7 +205,7 @@ MIPS\ rate = \frac{I_c}{T\times10^6}=\frac{f}{CPI\times10^6}
 $$
 每秒数百万个浮点指令(MFLOPS)
 
-![image-20211006200128178](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211006200128178.png)
+![image-20211006200128178](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211006200128178.png)
 
 ### (2) 基准测试程序
 

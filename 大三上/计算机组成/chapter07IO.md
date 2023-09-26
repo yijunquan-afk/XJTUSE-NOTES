@@ -16,7 +16,7 @@
 >
 > **6、I/O通道，I/O通道的概念、功能、分类、最大传输率的计算与应用**
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211022114603362.png" alt="image-20211022114603362" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704188.png" alt="image-20211022114603362" style="zoom:60%;" />
 
 外围设备种类繁多
 
@@ -54,9 +54,9 @@
 
 一些设备如下：
 
-![image-20211022115523436](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211022115523436.png)
+![image-20211022115523436](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704169.png)
 
-![image-20211022115707831](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211022115707831.png)
+![image-20211022115707831](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704171.png)
 
 ### 1、键盘/监视器
 
@@ -116,7 +116,7 @@ I/O模块的功能如下：
 
 ### 模块结构
 
-![image-20211027103008202](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211027103008202.png)
+![image-20211027103008202](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704172.png)
 
 地址线、控制线是CPU的，I/O设备的地址通过I/O模块识别
 
@@ -136,7 +136,7 @@ I/O模块的功能如下：
 
 CPU 在发出 I/O 命令时等待 I/O 模块完成操作，会浪费CPU
 
-![](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20220220110718670.png)
+![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704173.png)
 
 **执行过程**
 
@@ -170,7 +170,7 @@ CPU 在发出 I/O 命令时等待 I/O 模块完成操作，会浪费CPU
 > >
 > > 有I/O特殊命令：指令集不会太多
 
-![image-20211027111101075](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211027111101075.png)
+![image-20211027111101075](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704175.png)
 
 **优势**
 
@@ -188,15 +188,15 @@ CPU 在发出 I/O 命令时等待 I/O 模块完成操作，会浪费CPU
 
 处理器发送一个I/O命令道模块，然后去处理其他有用的工作，当I/O模块准备与处理器交换数据时，它中断处理器以请求服务，然后处理器执行数据传送，最后恢复原来的处理工作
 
-![image-20211027112615844](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211027112615844.png)
+![image-20211027112615844](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704176.png)
 
 中断信号的发出由I/O自控
 
 <font color="red">**中段处理过程**</font>
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211027112835234.png" alt="image-20211027112835234" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704189.png" alt="image-20211027112835234" style="zoom:67%;" />
 
-![image-20211027113524696](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211027113524696.png)
+![image-20211027113524696](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704178.png)
 
 **中断源的识别**
 
@@ -250,13 +250,13 @@ CPU和DMA的数据传输模式：
 >
 > :three:transparent mode 透明方式
 
-![image-20211029103840985](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029103840985.png)
+![image-20211029103840985](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704179.png)
 
 ### DMA结构
 
 DMA结构如下：
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029101346115.png" alt="image-20211029101346115" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704190.png" alt="image-20211029101346115" style="zoom:67%;" />
 
 DMA不用解析地址，直接将地址信号传给后面的I/O设备，让其进行判断
 
@@ -280,7 +280,7 @@ DMA不用解析地址，直接将地址信号传给后面的I/O设备，让其�
 
 一块数据传输完以后才发送中断，不像中断驱动一个字终中断一次
 
-![image-20211029103138623](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029103138623.png)
+![image-20211029103138623](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704180.png)
 
 ### DMA Transfer Cycle Stealing
 
@@ -304,11 +304,11 @@ DMA的特点
 
 ### DMA配置
 
-![image-20211029104043056](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029104043056.png)
+![image-20211029104043056](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704182.png)
 
-![image-20211029104104606](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029104104606.png)
+![image-20211029104104606](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704183.png)
 
-![image-20211029104132284](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029104132284.png)
+![image-20211029104132284](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704184.png)
 
 最常使用第三种，CPU只暂停一次
 
@@ -342,7 +342,7 @@ DMA的特点
 
 ### 题
 
-![image-20211029104756694](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029104756694.png)
+![image-20211029104756694](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704185.png)
 
 定一秒的时间区级
 
@@ -381,7 +381,7 @@ DMA的特点
 
 **I/O通道是拥有自己的处理器来执行I/O程序的I/O模块**
 
-![image-20211226105141097](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226105141097.png)
+![image-20211226105141097](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704186.png)
 
 I/O 程序位于主内存中 ，事实上，I/O 通道代表了 DMA 概念的扩展。 因此，I/O 通道能够执行 I/O 指令并控制 I/O 操作
 

@@ -24,7 +24,7 @@
 
 微操作$uOP$是CPU基本的、原子的操作
 
-![image-20211124114738784](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211124114738784.png)
+![image-20211124114738784](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704541.png)
 
 
 
@@ -50,9 +50,9 @@
 
 **符号化表示**
 
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227120136938.png" alt="image-20211227120136938" style="zoom:67%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704543.png" alt="image-20211227120136938" style="zoom:67%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227120158046.png" alt="image-20211227120158046" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704544.png" alt="image-20211227120158046" style="zoom:67%;" />
 
 微操作的分组必须遵守下面两个简单的原则:
 
@@ -122,7 +122,7 @@ t3: W ← 1, memory ← (MBR) //MBR相当于常用的temp变量
 为区分CPU处于哪个周期，设置有2位的新寄存器，称为指令周期代码**Instruction Cycle Code ICC**
 `00:取指	01：间接	10：执行	11：中断`
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211126103832963.png" alt="image-20211126103832963" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704545.png" alt="image-20211126103832963" style="zoom:67%;" />
 
 ## 15.2 处理器控制
 
@@ -149,23 +149,23 @@ t3: W ← 1, memory ← (MBR) //MBR相当于常用的temp变量
 >
 > 输出是：CPU内的控制信号、到控制总线的控制信号
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211126105359205.png" alt="image-20211126105359205" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704546.png" alt="image-20211126105359205" style="zoom:67%;" />
 
 ### 控制信号举例
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211126105735679.png" alt="image-20211126105735679" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704547.png" alt="image-20211126105735679" style="zoom:67%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211126111442423.png" alt="image-20211126111442423" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704549.png" alt="image-20211126111442423" style="zoom:67%;" />
 
 ### 处理器内部的组织
 
-使用一个CPU的**内部总线**，ALU和所有的CPU寄存器都连接到单一的内部总线上<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211126112510825.png" alt="image-20211126112510825" style="zoom: 60%; float: right;" />
+使用一个CPU的**内部总线**，ALU和所有的CPU寄存器都连接到单一的内部总线上<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704550.png" alt="image-20211126112510825" style="zoom: 60%; float: right;" />
 
 新增了两个寄存器，**分别标记为Y和Z，两个操作数来的时候，将其中一个通过Y进行暂存。**
 
 ALU 是一个组合逻辑电路，其内部无存储电路。这样，当控制信号激活ALU的某个功能时，ALU输人通过ALU的组合逻辑电路被转换为ALU的输出。因此，ALU的输出不能直接连到内部总线上，因为这个输出会又反馈为输入。为此，**寄存器z提供了这个输出的暂时存储**
 
-将存储器的值加到AC的操作有如下步骤：![image-20211126113440247](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211126113440247.png)
+将存储器的值加到AC的操作有如下步骤：![image-20211126113440247](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704542.png)
 
 ## 15.3 硬连线实现Hardwired Implementation
 

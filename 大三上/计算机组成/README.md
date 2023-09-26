@@ -51,7 +51,7 @@
 
 > control signal、interface、memory technology、bus technology等等对程序员透明的硬件细节
 
-![img](https://img-blog.csdnimg.cn/img_convert/264163eae8a6042ff8611479abf49333.png)
+![img](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/264163eae8a6042ff8611479abf49333.png)
 
 ### 易错
 
@@ -214,7 +214,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 >
 > 中断的分类如下：
 >
-> ![image-20211008083912276](https://img-blog.csdnimg.cn/img_convert/e281962514ad2284eb6752af9971f82e.png)
+> ![image-20211008083912276](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/e281962514ad2284eb6752af9971f82e.png)
 
 **4、中断执行过程**
 
@@ -262,7 +262,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 
 **2、连接计算机主要部件（处理器、存储器、I/O)的总线称为系统总线，包括数据线、地址线和控制线**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0c7ae5794551424eb55833dfa1f3dfff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6Zuo6JC95L-K5rOJ,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6Zuo6JC95L-K5rOJ,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 **3、数据总线概念以及宽度意义data bus**
 
@@ -286,7 +286,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 
 > 类型、仲裁方法、时序、总线宽度、数据传输类型
 >
-> ![image-20211010220930233](https://img-blog.csdnimg.cn/img_convert/b86e03203dde92ecca2af6d0a0dff3e7.png)
+> ![image-20211010220930233](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/b86e03203dde92ecca2af6d0a0dff3e7.png)
 
 **7、总线的类型**
 
@@ -306,7 +306,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 >
 > > 常见的集中式总线控制有三种:**链式查询、计数器定时查询、独立请求**;
 > >
-> > ![image-20211010224020126](https://img-blog.csdnimg.cn/img_convert/ce9e9b471bed67a856f185cc61811ad6.png)
+> > ![image-20211010224020126](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/ce9e9b471bed67a856f185cc61811ad6.png)
 >
 > **分布式**：没有中央控制器，每一个模块中包含有访问控制逻辑，分享总线
 
@@ -362,7 +362,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 >
 > :three: 独立请求方式速度最快，但硬件器件用量大，连线多，成本较高
 >
-> ![](https://img-blog.csdnimg.cn/img_convert/86d319751e37591891aaa96fdf6e8840.png)
+> ![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/86d319751e37591891aaa96fdf6e8840.png)
 
 **4、常见的总线通信方式有哪些**？各有什么特点？
 
@@ -435,7 +435,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 
 > 为了解决大容量、低价格与高速度三者之间i，所以引入了存储器的分层结构。分层结构包括CPU、cache、主存和辅存。依据是局部性原理
 >
-> ![image-20211228100700070](https://img-blog.csdnimg.cn/img_convert/4d860356da0c36c52afd39decb8d0c12.png)
+> ![image-20211228100700070](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/4d860356da0c36c52afd39decb8d0c12.png)
 
 **3、局部性原理|Locality of Reference**
 
@@ -461,7 +461,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 >
 > 行的数量远远小于主存的块的数目。由于块数多于行数，所以单个行不可能永远的被某个块专用，因此需要一个标记位tag，这个通常是主存储器地址的一部分。
 >
-> ![image-20211031204359380](https://img-blog.csdnimg.cn/img_convert/fdc1a5f57bcbd8bc005643f0dcac1516.png)
+> ![image-20211031204359380](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/fdc1a5f57bcbd8bc005643f0dcac1516.png)
 
 **6、cache容量的选择**
 
@@ -671,7 +671,7 @@ P: peta (bytes，Hz):  10^15 --1024^5＝2^50
 
 **3、磁盘的物理特性**
 
-> ![image-20211020114525182](https://img-blog.csdnimg.cn/img_convert/63db9515db69db055ee6b0cfd905e045.png)
+> ![image-20211020114525182](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/63db9515db69db055ee6b0cfd905e045.png)
 >
 > 空气动压气隙(温氏磁盘): 旋转以后由于浮力,磁头轻轻上升——应用最广泛
 
@@ -817,7 +817,7 @@ for(i = 0; i<9;i++){
 
 **2、为什么需要I/O模块、I/O模块的功能**
 
-> 为什么需要：旨在提供系统的方法来控制与外部世界的交互，并为 OS 提供信息以有效管理 I/O 活动![image-20211027103008202](https://img-blog.csdnimg.cn/img_convert/1e3751dd605ad0b0e0f85c77e4ff3814.png)
+> 为什么需要：旨在提供系统的方法来控制与外部世界的交互，并为 OS 提供信息以有效管理 I/O 活动![image-20211027103008202](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/1e3751dd605ad0b0e0f85c77e4ff3814.png)
 >
 > 功能：控制与定时、处理器通信、设备通信、数据缓冲、检错
 
@@ -879,7 +879,7 @@ for(i = 0; i<9;i++){
 
 > 处理器发送一个I/O命令到模块，然后去处理其他有用的工作，当I/O模块准备与处理器交换数据时，它中断处理器以请求服务，然后处理器执行数据传送，最后恢复原来的处理工作
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211027112835234.png" alt="image-20211027112835234" style="zoom:67%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20211027112835234.png" alt="image-20211027112835234" style="zoom:67%;" />
 >
 > 以读为例
 >
@@ -933,7 +933,7 @@ for(i = 0; i<9;i++){
 >
 > 包括计数器、缓冲、地址寄存器、控制与状态逻辑、中断控制器
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20220101194147295.png" alt="image-20220101194147295" style="zoom:67%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20220101194147295.png" alt="image-20220101194147295" style="zoom:67%;" />
 >
 > **CPU给DMA委派任务时是以块为单位的，DMA传送数据到存储器时，是一个字一个字的**，传输完成以后，会发送一个中断信号给CPU，CPU只在开始和结束时参与
 >
@@ -1051,7 +1051,7 @@ for(i = 0; i<9;i++){
 >
 > 数据由寄存器提交给ALU，运算结果页存放于ALU，控制器提供控制ALU操作和数据传入送出ALU的信号；ALU根据运算结果会设置一些标志
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029114453258.png" alt="image-20211029114453258" style="zoom: 67%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20211029114453258.png" alt="image-20211029114453258" style="zoom: 67%;" />
 
 **2、整数的表示，包括无符号数的表示以及有符号数的原码、反码、补码和真值的关系与转换**
 
@@ -1134,7 +1134,7 @@ for(i = 0; i<9;i++){
 
 ### 课堂重点
 
-![image-20211226175452859](https://img-blog.csdnimg.cn/img_convert/d4d4ab200d71fa16b26bea107000b478.png)
+![image-20211226175452859](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/d4d4ab200d71fa16b26bea107000b478.png)
 
 ### 其他概念
 
@@ -1249,7 +1249,7 @@ for(i = 0; i<9;i++){
 > >
 > > 同时，PC+1
 > >
-> > <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110115853266.png" alt="image-20211110115853266" style="zoom:50%;" />
+> > <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20211110115853266.png" alt="image-20211110115853266" style="zoom:50%;" />
 >
 > 一旦经历过取指周期，控制器会检查IR中的内容
 >
@@ -1263,7 +1263,7 @@ for(i = 0; i<9;i++){
 > >
 > > 送入MBR
 > >
-> > ![image-20211226210853282](https://img-blog.csdnimg.cn/img_convert/deace396f01046f63494efdfc9dd8c7e.png)
+> > ![image-20211226210853282](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/deace396f01046f63494efdfc9dd8c7e.png)
 >
 > #### 执行周期
 >
@@ -1281,13 +1281,13 @@ for(i = 0; i<9;i++){
 > >
 > > 可获取下一个指令（中断处理程序的第一个指令）
 > >
-> > <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112102111756.png" alt="image-20211112102111756" style="zoom:50%;" />
+> > <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20211112102111756.png" alt="image-20211112102111756" style="zoom:50%;" />
 
 **5、流水线时序图要会画**
 
 策略是分段
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112104443134.png" alt="image-20211112104443134" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20211112104443134.png" alt="image-20211112104443134" style="zoom:50%;" />
 
 **6、影响流水线的性能指标与计算【要记定义】**
 
@@ -1575,7 +1575,7 @@ for(i = 0; i<9;i++){
 >
 > 当执行阶段中的功能单元变成可用时，需要此功能单元的指令就会由指令窗口发射到执行段。只要:one:**指令所需的具体功能单元是可用的,以及:two:没有冲突或相关性阻塞这条指令**,那任何指令都可以被发射。
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211124105246408.png" alt="image-20211124105246408" style="zoom:80%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/image-20211124105246408.png" alt="image-20211124105246408" style="zoom:80%;" />
 
 **3、超标量中用来提高性能的三种硬件技术：资源复制、无序发射、寄存器重命名，<mark>必须记住</mark>**
 
@@ -1683,7 +1683,7 @@ for(i = 0; i<9;i++){
 > > 对用户友好
 > > 很少使用
 > >
-> > ![image-20211201103646326](https://img-blog.csdnimg.cn/img_convert/ada8e577394490cc72f1df6ebb74b9da.png)
+> > ![image-20211201103646326](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/ada8e577394490cc72f1df6ebb74b9da.png)
 >
 > **Horizontal Micro-instruction水平微指令**：每个微指令能指定同时并行执行许多的微操作
 >
@@ -1691,7 +1691,7 @@ for(i = 0; i<9;i++){
 > > 可实现高度并行操作 
 > > 控制信息的编码很少
 > >
-> > ![image-20211201103952812](https://img-blog.csdnimg.cn/img_convert/fbced39d2af794de53a4743d7a4c5ee5.png)
+> > ![image-20211201103952812](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/fbced39d2af794de53a4743d7a4c5ee5.png)
 
 **4、微程序式控制器的结构包括哪些部分**
 
@@ -1705,7 +1705,7 @@ for(i = 0; i<9;i++){
 > >
 > > 图中所示的第三个部件是**排序单元（sequencing unit），**它向控制地址寄存器装人地址并发出读命令。
 > >
-> > ![image-20211201104752774](https://img-blog.csdnimg.cn/img_convert/29900d36d670fd0feba02847eabdcf67.png)
+> > ![image-20211201104752774](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/29900d36d670fd0feba02847eabdcf67.png)
 
 **5、微程序式控制器的任务是什么**
 
@@ -1895,7 +1895,7 @@ for(i = 0; i<9;i++){
 >
 > > 维护工作量大、维护费用较高
 >
-> ![image-20211227173455454](https://img-blog.csdnimg.cn/img_convert/98d0eeb1ebb0b18c9beb49ede4441bdf.png)
+> ![image-20211227173455454](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/98d0eeb1ebb0b18c9beb49ede4441bdf.png)
 >
 > 典型组织：主动式备份
 
@@ -1913,7 +1913,7 @@ for(i = 0; i<9;i++){
 >
 > 没有Cache一致性维护的NUMA系统或多或少等同于集群系统
 >
-> ![image-20211227174345953](https://img-blog.csdnimg.cn/img_convert/679f010ccb3a3c5af3ae5fc36a7bc24b.png)
+> ![image-20211227174345953](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/679f010ccb3a3c5af3ae5fc36a7bc24b.png)
 >
 > > 多个独立的结点通过某种通信网络互连
 > >

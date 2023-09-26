@@ -34,7 +34,7 @@ CPU执行指令的步骤：
 
 为了执行指令，CPU必须包括ALU和CU，同时，CPU需要临时存储一些数据，包括下一条指令的位置。因此，CPU需要一个小的内部内存——寄存器
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110112906449.png" alt="image-20211110112906449" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704513.png" alt="image-20211110112906449" style="zoom:50%;" />
 
 ## 12.2 寄存器组织
 
@@ -138,11 +138,11 @@ CPU执行指令的步骤：
 
 ### 微处理器寄存器举例
 
-![image-20211226205539906](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226205539906.png)
+![image-20211226205539906](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704507.png)
 
 ## 12.3 指令周期
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110115010089.png" alt="image-20211110115010089" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704515.png" alt="image-20211110115010089" style="zoom: 67%;" />
 
 ### **间接寻址周期**
 
@@ -152,9 +152,9 @@ CPU执行指令的步骤：
 
 可视为附加指令子周期
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110115400739.png" alt="image-20211110115400739" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704516.png" alt="image-20211110115400739" style="zoom:50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110115452013.png" alt="image-20211110115452013" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704517.png" alt="image-20211110115452013" style="zoom:67%;" />
 
 一旦取来一个指令，它的操作数指定符必须被识别，然后读取存储器中的每个操作数，**这个过程可能要求间接寻址**。寄存器操作数不需要从存储器读取，一旦操作完成，可能需要一个类似的过程将结果存入主存。
 
@@ -176,7 +176,7 @@ CPU执行指令的步骤：
 >
 > 同时，PC+1
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110115853266.png" alt="image-20211110115853266" style="zoom:50%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704519.png" alt="image-20211110115853266" style="zoom:50%;" />
 
 一旦经历过取指周期，控制器会检查IR中的内容
 
@@ -190,7 +190,7 @@ CPU执行指令的步骤：
 >
 > 送入MBR
 >
-> ![image-20211226210853282](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226210853282.png)
+> ![image-20211226210853282](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704508.png)
 
 #### 执行周期
 
@@ -208,7 +208,7 @@ CPU执行指令的步骤：
 >
 > 可获取下一个指令（中断处理程序的第一个指令）
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112102111756.png" alt="image-20211112102111756" style="zoom:50%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704520.png" alt="image-20211112102111756" style="zoom:50%;" />
 
 ## 12.4 指令流水线（重点）
 
@@ -216,11 +216,11 @@ CPU执行指令的步骤：
 
 可以将指令处理分为两个阶段：取指令和执行指令。在指令执行过程中，主存可能没有存取操作，可以在解码和执行当前指令时获取下一个指令。
 
-![image-20211112102552622](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112102552622.png)
+![image-20211112102552622](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704509.png)
 
 这种方式需要指令缓存，需要更多的寄存器
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112102941718.png" alt="image-20211112102941718" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704521.png" alt="image-20211112102941718" style="zoom:80%;" />
 
 预取可以提速，但是速度不会翻一番，若指令之间有关系，会造成无效缓存以及速度降低
 
@@ -242,13 +242,13 @@ CPU执行指令的步骤：
 >
 > 写操作数WO
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112104443134.png" alt="image-20211112104443134" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704522.png" alt="image-20211112104443134" style="zoom:50%;" />
 
 实际运行中，指令之间肯定会有依赖，条件转移也会降低速度，有条件转移是在**执行阶段**知道转还是不转
 
 > C语言中的goto是无条件转移、for循环是条件转移
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112105633163.png" alt="image-20211112105633163" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704524.png" alt="image-20211112105633163" style="zoom:50%;" />
 
 ### 流水线性能
 
@@ -295,7 +295,7 @@ $n>>k，T_p\thickapprox T_{pmax}$
 
 如果指令4是一个条件转移指令，并且转移的目标是指令7。在此执行中，结果是进行分支。绘制流水线各功能阶段时序图，计算提速和吞吐量。假设在指令8之后，没有其他指令要执行。
 
-![image-20220220180233871](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20220220180233871.png)
+![image-20220220180233871](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704511.png)
 
 ### 流水线相关性pipeline hazard
 
@@ -307,7 +307,7 @@ $n>>k，T_p\thickapprox T_{pmax}$
 
 就意味着某些指令的处理过程需要停滞
 
-![image-20211226232412316](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226232412316.png)
+![image-20211226232412316](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704512.png)
 
 #### 数据冲突data hazard
 
@@ -317,7 +317,7 @@ $n>>k，T_p\thickapprox T_{pmax}$
 
 举例：
 
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211112115032253.png" alt="image-20211112115032253" style="zoom:67%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704525.png" alt="image-20211112115032253" style="zoom:67%;" />
 >
 > 第一条指令将寄存器EAX和EBX中的内容相加，并将结果保存在EAX寄存器；
 >

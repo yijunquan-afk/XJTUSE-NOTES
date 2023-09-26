@@ -48,7 +48,7 @@
 
 
 
-![image-20211020111724657](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020111724657.png)
+![image-20211020111724657](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704155.png)
 
 ### 6.1.2 数据组织和格式化data organization and formatting
 
@@ -66,7 +66,7 @@
 
 **数据以扇区(sector) 为单位传入或传出**磁盘(如图6-2所示)。每个磁道通常有数百个扇区，其长度可固定也可变化。当前，大多数系统使用固定长度的扇区，512字节几乎是通用的扇区大小。**为避免对系统提出不合理的定位精度要求，相邻扇区也留有间隙**。
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020112758228.png" alt="image-20211020112758228" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704164.png" alt="image-20211020112758228" style="zoom:67%;" />
 
 **磁盘布局的方法**
 
@@ -80,17 +80,17 @@
 >
 > 角速度会变
 
-![image-20211020113537066](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020113537066.png)
+![image-20211020113537066](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704156.png)
 
 需要附加数据来记录磁道和扇区的位置信息
 
-![image-20211020113733032](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020113733032.png)
+![image-20211020113733032](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704157.png)
 
 ### 6.1.3 物理特性
 
 **固定/可移动(fixed/moveable)**
 
-![image-20211020114525182](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020114525182.png)
+![image-20211020114525182](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704159.png)
 
 **可移动/不可移动(removable/nonremovable)**: 通常不可取出
 
@@ -98,7 +98,7 @@
 
 某些磁盘驱动器内**垂直安装多个盘片,**一般最上面和最下面是不放数据的
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020114944099.png" alt="image-20211020114944099" style="zoom:70%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704166.png" alt="image-20211020114944099" style="zoom:70%;" />
 
 **磁头机制**
 
@@ -115,7 +115,7 @@
 磁盘I/0操作的实际细节取决于计算机系统、操作系统、I/0通道特性和磁盘控制器硬件。
 下图给出了一个常规的磁盘I/0传送时序图。
 
-![image-20211020115922415](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020115922415.png)
+![image-20211020115922415](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704160.png)
 
 #### 1、seek time寻道时间
 
@@ -149,7 +149,7 @@ $T_s$是平均寻道时间
 情况1：序列组织。
 情况2：数据随机分布
 
-![](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211225214718357.png)
+![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704161.png)
 
 ## 6.2 Solid State Drives固态硬盘
 
@@ -209,9 +209,9 @@ CD-ROM比CD能力强，CD只能存音频，CD-ROM具有纠错机制，可以存�
 
 也是以扇区作为传输单位
 
-![image-20211022112457391](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211022112457391.png)
+![image-20211022112457391](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704162.png)
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211022112839227.png" alt="image-20211022112839227" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704168.png" alt="image-20211022112839227" style="zoom:50%;" />
 
 访问较困难
 

@@ -35,7 +35,7 @@
 > 表达并行性的能力有限
 > 很少使用
 >
-> ![image-20211201103646326](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201103646326.png)
+> ![image-20211201103646326](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704551.png)
 
 水平微指令：每个微指令指定要并行执行的许多不同的微操作
 
@@ -43,7 +43,7 @@
 > 可实现高度并行操作 
 > 控制信息的编码很少
 >
-> ![image-20211201103952812](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201103952812.png)
+> ![image-20211201103952812](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704552.png)
 
 ### 微程序控制器
 
@@ -57,7 +57,7 @@
 >
 > 图中所示的第三个部件是**排序单元（sequencing unit），**它向控制地址寄存器装人地址并发出读命令。
 >
-> ![image-20211201104752774](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201104752774.png)
+> ![image-20211201104752774](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704553.png)
 
 **控制器的功能**
 
@@ -66,7 +66,7 @@
 > :three: 控制缓冲寄存器的内容生成控制信号，并为定序逻辑提供下一条地址信息。
 > :four: 定序逻辑根据这个地址信息和ALU标志，将一个新地址装人到控制地址寄存器。所有这些事情都发生在一个时钟周期内。
 
-![image-20211201105540040](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201105540040.png)
+![image-20211201105540040](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704554.png)
 
 对于第四步，在每条微指令结束时，定序逻辑都要将一个新的地址装入控制地址寄存器，取决于ALU标志和控制缓冲寄存器的内容，要做如下决策：
 
@@ -104,7 +104,7 @@
 
 > 双地址字段、单地址字段、可变格式
 
-![image-20211227161944224](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227161944224.png)
+![image-20211227161944224](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704555.png)
 
 ## 16.3 微指令执行
 

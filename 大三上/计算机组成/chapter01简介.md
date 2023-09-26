@@ -68,11 +68,11 @@
 
 计算机可能的一些操作如下：
 
-![image-20211001184056426](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211001184056426.png)
+![image-20211001184056426](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211001184056426.png)
 
-![image-20211001184152369](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211001184152369.png)
+![image-20211001184152369](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211001184152369.png)
 
 ### (2) structure
 
-![image-20211224114049009](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211224114049009.png)
+![image-20211224114049009](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img13/image-20211224114049009.png)
 
