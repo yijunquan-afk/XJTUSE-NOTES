@@ -28,7 +28,7 @@
 
 存储系统最重要的一些特性如下：
 
-![image-20211031201134319](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031201134319.png)
+![image-20211031201134319](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704116.png)
 
 **字**:存储器组织的“自然”单元。字长通常与一个整数的数据位数和指令长度相等，但也有很多例外。
 
@@ -100,7 +100,7 @@ $$
 
 存取时间越短，平均每位的花费就越大；存储容量越大，平均每位的花费就越小；存储容量越大，存取时间就越长。
 
-![image-20211225135123451](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211225135123451.png)
+![image-20211225135123451](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704117.png)
 
 对于以上的层次结构，随着层次的下降：每位价格下降、容量增大、存取时间变长、处理器访问存储器的频率降低
 
@@ -111,7 +111,7 @@ cache存储器的目的是使存储器的速度逼近可用的最快存储器的
 cache中存放了主存储器的部分副本。当CPU试图访问主存中的某个字时，首先检查这个字是否在cache 中，如果是，则把这个字传送给CPU;如果不是，则将**主存中包含这个字固定大小的块**读人cache中，然后再传送该字给CPU。
 
 因为访问的局部性，当把某块数据存人cache,以满足某次存储器的访问时，CPU将来还很有可能访问同一存储位置或该数据块中的其他字。
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031203640712.png" alt="image-20211031203640712" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704128.png" alt="image-20211031203640712" style="zoom:67%;" />
 
 主存储器有多达$2^n$个可寻址的字组成，每一个字都有唯一的n位地址，我们将主存看成许多定长的块，每个块有K个字，块数为$M=2^n/K$.
 
@@ -119,11 +119,11 @@ cache中存放了主存储器的部分副本。当CPU试图访问主存中的某
 
 行的数量远远小于主存的块的数目。由于块数多于行数，所以单个行不可能永远的被某个块专用，因此需要一个标记位tag，这个通常是主存储器地址的一部分。
 
-![image-20211031204359380](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031204359380.png)
+![image-20211031204359380](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704119.png)
 
 cache读操作
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031204815738.png" alt="image-20211031204815738" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704129.png" alt="image-20211031204815738" style="zoom:67%;" />
 
 
 
@@ -135,7 +135,7 @@ Size、Mapping Function Replacement Algorithm 、Write Policy 、Block Size
 
 Number of Caches、address of Cache
 
-![image-20211008101540485](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211008101540485.png)
+![image-20211008101540485](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704120.png)
 
 ### 4.3.2 cache 容量的选择
 
@@ -163,13 +163,13 @@ Number of Caches、address of Cache
 
 主存中的块j和cache中的行i有如下直接映射关系：$i=j\ mode\ m$，其中m为cache的行数
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031211207313.png" alt="image-20211031211207313"  />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704131.png" alt="image-20211031211207313"  />
 
 **直接映射的实现**
 
 存储器的地址会被分为三部分：
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211008104318843.png" alt="image-20211008104318843" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704132.png" alt="image-20211008104318843" style="zoom:80%;" />
 
 低位是字内容；
 
@@ -179,7 +179,7 @@ Number of Caches、address of Cache
 
 tag域位数是用block域位数减去line域位数算出来的，不是直接分配
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031210959717.png" alt="image-20211031210959717" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704133.png" alt="image-20211031210959717" style="zoom:67%;" />
 
 <font color="red">**总结如下**</font>
 
@@ -207,7 +207,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 **全关联映射允许每一个主存块装入cache中的任意行，此时只需要用标记位表示一个主存块。**
 
-![image-20211031212059064](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031212059064.png)
+![image-20211031212059064](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704122.png)
 
 为了确认某一块是否在cache中，需要对每一行中的标记进行搜寻检查。**地址中无对应行号的字段**
 
@@ -241,9 +241,9 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 这被称为k路组关联映射。采用组关联映射，块$B_0$能够映射到组j的任意行中。在全相联映射中，每一个字映射到多个cache行中。而对于组相联映射，每一个字映射到特定一组的所有cache 行中，于是，主存中的$B_0$块映射到第0组，如此等等。因此，组相联映射cache在物理上是使用了v个全关联映射的cache。同时，它也可看作为k个直接映射的cache的同时使用，如图4-13b所示。每一个直接映射的cache称为路，包括0个cache行。主存中首v个块分别映射到每路的v行中，接下来的v个块也是以同样的方式映射，后面也如此。直接映射一般应用于轻度关联(h 值较小)的情况，而全相联映射应用于高度关联的情况。
 
-![image-20211013101411998](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211013101411998.png)
+![image-20211013101411998](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704123.png)
 
-![image-20211031212735041](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031212735041.png)
+![image-20211031212735041](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704124.png)
 
 <font color="red">**总结如下**</font>
 
@@ -288,7 +288,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 >
 > ​	  :three: 画出地址表示图如下：
 >
-> ![image-20211031214826303](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031214826303.png)
+> ![image-20211031214826303](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704125.png)
 >
 > 2）首先要明确一点：<font color="red">只有在第一遍访问时才会存在未命中情况</font>，那么我们就需要计算第一次有多少个字没有命中。
 > 当出现一次未命中时，主存就会把对应块上的数据传送到Cache中，那么我们只需要计算出第一遍遍历中主存向Cache传送了多少次数据，就可以得到未命中的次数.100个字需要100/8=13个块。那么第一遍便利的时候主存需要向Cache传送13次数据，也就是说有13次未命中。全部过程访问8x100=800次，未命中13次，则命中率为(800-13)/800=98.375%
@@ -306,7 +306,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 > 对于两路组相联，这种方法很容易实现，每行包含一个USE位。当某行被引用时，其USE位被置为1,而这一组中另一行的USE位被置为0。当把块读入到这一组中时，就会替换掉USE位为0的行。由于我们假定越是最近使用的存储单元越有可能将被访问，因此，LRU会给出最佳的命中率。对于全相联cache, LRU也相对容易实现。高速缓存机制会为cache中的每行保留一个 单独的索引表。当某一行被访问时，它就会移动到表头，而在表尾的行将被替换掉
 
-![image-20211013112446355](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211013112446355.png)
+![image-20211013112446355](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704126.png)
 
 **First in first out**：先进先出，替换掉在cache中停留时间最长的块
 
@@ -314,7 +314,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 **Random**：性能与LRU几乎差不多
 
-![image-20211031215824626](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031215824626.png)
+![image-20211031215824626](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704127.png)
 
 ### 4.3.5 写策略
 

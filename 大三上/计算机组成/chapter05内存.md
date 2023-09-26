@@ -2,8 +2,6 @@
 
 # 第五章 内部存储器
 
-![第五章 内部存储器](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8.png)
-
 ## keypoints
 
 > **1、动态RAM和静态RAM的特点与用途**
@@ -26,9 +24,9 @@
 > 能够写入信息(至少一次)来设置状态;
 > 能够读出状态信息。
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102142126381.png" alt="image-20211102142126381" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704145.png" alt="image-20211102142126381" style="zoom:67%;" />
 
-![image-20211102142641622](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102142641622.png)
+![image-20211102142641622](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704134.png)
 
 ### 5.1.2 DRAM与SRAM
 
@@ -44,7 +42,7 @@
 
 对于下图，当有电压施加到地址线上，晶体管导通；否则晶体管开路
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211225174203136.png" alt="image-20211225174203136" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704146.png" alt="image-20211225174203136" style="zoom:67%;" />
 
 ##### 写操作
 
@@ -62,7 +60,7 @@
 
 因为不用刷新，因此也更快，适用于cache
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211225174218876.png" alt="image-20211225174218876" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704147.png" alt="image-20211225174218876" style="zoom:67%;" />
 
 
 
@@ -126,27 +124,27 @@ ROM，即只读存储器，含有不能改变的永久性数据，掉电以后�
 
 包括NOR与NAND，NAND内存更适合外部存储器，如USB闪存驱动器、存储卡，以及所谓的固态磁盘(SSD)
 
-![image-20211015105816853](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015105816853.png)
+![image-20211015105816853](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704136.png)
 
 ### 5.1.4 芯片逻辑
 
 半导体存储器也是封装的芯片，每块芯片包含一组存储位元阵列
 
-![image-20211015112343148](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015112343148.png)
+![image-20211015112343148](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704137.png)
 
 ### 5.1.5 芯片封装
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102144910639.png" alt="image-20211102144910639" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704148.png" alt="image-20211102144910639" style="zoom:67%;" />
 
 ### 5.1.6 模块组织
 
-![image-20211015113208887](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015113208887.png)
+![image-20211015113208887](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704138.png)
 
 #### 存储器扩充（考研点)
 
 :one: <font color="red">1kx4 -> 1kx8   字长扩展</font>
 
-![image-20211015114337344](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015114337344.png)
+![image-20211015114337344](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704139.png)
 
 CS：选中信号端	A0~An：地址线	D0~Dn：数据线	
 
@@ -154,7 +152,7 @@ CS：选中信号端	A0~An：地址线	D0~Dn：数据线
 
 :two: <font color="red">1kx8-> 2kx8  字数扩展</font>
 
-![image-20211015114413227](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015114413227.png)
+![image-20211015114413227](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704141.png)
 
 高位做片选比较方便
 
@@ -162,7 +160,7 @@ CS：选中信号端	A0~An：地址线	D0~Dn：数据线
 
 先1kx4->1kx8再1kx8->4kx8
 
-![image-20211015114901716](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015114901716.png)
+![image-20211015114901716](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704143.png)
 
 2-4译码器保证了每一次只有一个芯片有效
 
@@ -211,13 +209,13 @@ CS：选中信号端	A0~An：地址线	D0~Dn：数据线
 >
 > rol. Now, we have following chips:
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102150030853.png" alt="image-20211102150030853" style="zoom:50%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704149.png" alt="image-20211102150030853" style="zoom:50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102150425367.png" alt="image-20211102150425367" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704151.png" alt="image-20211102150425367" style="zoom:50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102150446877.png" alt="image-20211102150446877" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704152.png" alt="image-20211102150446877" style="zoom: 50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020102942584.png" alt="image-20211020102942584" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704153.png" alt="image-20211020102942584" style="zoom:67%;" />
 
 
 

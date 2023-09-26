@@ -26,7 +26,7 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 
 **下一条指令引用**next instruction reference：执行当前指令以后去取下一条
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105103150013.png" alt="image-20211105103150013" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704491.png" alt="image-20211105103150013" style="zoom:67%;" />
 
 源操作数和结果操作数可能位于的范围
 
@@ -44,7 +44,7 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 
 对于机器码，每一条指令有一个唯一的位串，格式如下：
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105103825116.png" alt="image-20211105103825116" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704493.png" alt="image-20211105103825116" style="zoom:80%;" />
 
 为便于使用，普遍使用机器指令符号表示法
 
@@ -72,11 +72,11 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 >
 > 下一条指令被隐藏
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105105217708.png" alt="image-20211105105217708" style="zoom:67%;" />
+![23](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704484.png)
 
 #### 2地址指令
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105105545142.png" alt="image-20211105105545142" style="zoom:67%;" />
+![21](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704486.png)
 
 > 一个地址重用为源操作数地址和目标操作数地址
 >
@@ -86,7 +86,7 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 
 #### 1地址指令
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105110003733.png" alt="image-20211105110003733" style="zoom:67%;" />
+![21](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704487.png)
 
 > :one: 只有目的操作数的单操作数指令，从A1读取操作数，进行OP操作后，返回A1。操作码字段通常为加一、减一、求反、求补
 >
@@ -94,7 +94,7 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 
 #### 0地址指令
 
-![image-20211105111548714](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105111548714.png)
+![image-20211105111548714](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704488.png)
 
 零地址指令只给出操作码字段，主要包含以下两种情况
 
@@ -154,7 +154,7 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 
 逻辑移位与逻辑移位以及循环移位
 
-![image-20211105113749610](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105113749610.png)
+![image-20211105113749610](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704489.png)
 
 
 
@@ -190,13 +190,13 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 >
 > 可实现代码重用和任务分解
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105114528397.png" alt="image-20211105114528397" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704494.png" alt="image-20211105114528397" style="zoom:50%;" />
 
 过程调用是用户可控的，中断是系统决定的
 
 地址返回方式：寄存器、子程序的首地址、**栈顶**
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105115211075.png" alt="image-20211105115211075" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704495.png" alt="image-20211105115211075" style="zoom:67%;" />
 
 ### 10.4 MMX
 
@@ -204,5 +204,5 @@ CPU能执行的各种不同指令的集合称为CPU的指令集instruction set
 
 在单个时钟周期 （SIMD） 中同时对多个数据元素执行相同的操作，对于适当的应用，这些并行操作可以产生 2~8 倍的速度
 
-![image-20211105115739231](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211105115739231.png)
+![image-20211105115739231](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704490.png)
 

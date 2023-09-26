@@ -18,13 +18,13 @@
 
 数据由寄存器提交给ALU，运算结果页存放于ALU，控制器提供控制ALU操作和数据传入送出ALU的信号；ALU根据运算结果会设置一些标志
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211029114453258.png" alt="image-20211029114453258" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704214.png" alt="image-20211029114453258" style="zoom: 67%;" />
 
 ## 9.2 整数表示
 
 只有0和1代表一切，以二进制存储的数
 
-n位二进制数字an-1an-2....a1a0表示无符号整数A<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226115848169.png" alt="image-20211226115848169" style="zoom:50%;" />
+n位二进制数字an-1an-2....a1a0表示无符号整数A<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704215.png" alt="image-20211226115848169" style="zoom:50%;" />
 
 ### 符号-幅值表示法|Sign-Magnitude Representation
 
@@ -51,11 +51,11 @@ n位二进制数字an-1an-2....a1a0表示无符号整数A<img src="https://note-
 
 负数的补码=按位取反无符号数+1
 
-![image-20211226120558442](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226120558442.png)
+![image-20211226120558442](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704191.png)
 
-![image-20211226120749843](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226120749843.png)
+![image-20211226120749843](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704193.png)
 
-![image-20211226122201094](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226122201094.png)
+![image-20211226122201094](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704194.png)
 
 #### 取值范围
 
@@ -117,15 +117,15 @@ n位二进制数字an-1an-2....a1a0表示无符号整数A<img src="https://note-
 >
 > 只需要加法器和求补器
 
-![image-20211226123644927](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226123644927.png)
+![image-20211226123644927](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704195.png)
 
-![image-20211226123926286](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226123926286.png)
+![image-20211226123926286](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704197.png)
 
 ### 乘法【了解】
 
 #### 无符号数
 
-![image-20211226124034121](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226124034121.png)
+![image-20211226124034121](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704198.png)
 
 **这种算法的困难**
 
@@ -133,21 +133,21 @@ n位二进制数字an-1an-2....a1a0表示无符号整数A<img src="https://note-
 
 对于每一个部分积都需要存储，而且最后乘积位数增加了一倍，这就会造成器件的浪费和运算时间的增加
 
-![image-20211226124646281](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226124646281.png)
+![image-20211226124646281](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704199.png)
 
-![image-20211226124917277](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226124917277.png)
+![image-20211226124917277](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704200.png)
 
 
 
 #### 补码表示
 
-![image-20211226125106673](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226125106673.png)
+![image-20211226125106673](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704201.png)
 
-![image-20211226125148003](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226125148003.png)
+![image-20211226125148003](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704202.png)
 
 ### 除法【了解】
 
-![image-20211226125437443](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226125437443.png)
+![image-20211226125437443](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704203.png)
 
 补码转换为无符号数计算即可，注意符号位
 
@@ -181,7 +181,7 @@ $$
 >
 > 存储指数的范围是 [0，255]
 
-![image-20211226143852829](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226143852829.png)
+![image-20211226143852829](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704205.png)
 
 **由于小数点位置不固定，这种指数表示的浮点数应该有多种样式**
 
@@ -189,7 +189,7 @@ $$
 
 规格化方法是在小数点前只保留一位数字，并调整指数以保证有效值的最高有效数位为1
 
-![image-20211226144102932](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226144102932.png)
+![image-20211226144102932](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704206.png)
 
 
 
@@ -213,7 +213,7 @@ $$
 
 ​    对于加法和减法运算，必须要保证两个操作数有着相同的指数, 而乘法和除法就相对简单很多
 
-![image-20211226145339805](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226145339805.png)
+![image-20211226145339805](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704208.png)
 
 浮点数运算可能会存在的一些特殊情况
 
@@ -241,19 +241,19 @@ $$
 
 :five: 规格化结果
 
-![image-20211226150242283](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226150242283.png)
+![image-20211226150242283](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704209.png)
 
 #### 乘除法
 
-![image-20211226150150265](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226150150265.png)
+![image-20211226150150265](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704211.png)
 
-![image-20211226150300180](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226150300180.png)
+![image-20211226150300180](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704212.png)
 
 
 
 ## 9.5 IEEE 754 Formats
 
-![image-20211226150612722](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226150612722.png)
+![image-20211226150612722](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704213.png)
 
 | 类别                                    | 正负号 | 实际指数 | 有偏移指数 | 指数域    | 尾数域                       | 数值                 |
 | --------------------------------------- | ------ | -------- | ---------- | --------- | ---------------------------- | -------------------- |

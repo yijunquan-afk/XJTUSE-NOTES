@@ -126,7 +126,7 @@
 
 为利用这些性质，使用多个小的寄存器组，每个小组指派给一个不同的过程。过程调用时自动地切换来使用**不同的但大小固定**的寄存器窗口，而不再在存储器保存寄存器内容。相邻过程的窗口是（部分）重叠的，以允许参数传递
 
-![image-20211227085713193](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227085713193.png)
+![image-20211227085713193](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704526.png)
 
 每次只有一个寄存器窗口对用户可见
 
@@ -154,7 +154,7 @@ N个窗口的寄存器组仅能用于N-1个过程的直接调用
 
 •Berkeley RISC，通常采用8个窗口，每个窗口16个寄存器
 
-![image-20211227090013987](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227090013987.png)
+![image-20211227090013987](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704527.png)
 
 ### 全局变量
 
@@ -204,7 +204,7 @@ N个窗口的寄存器组仅能用于N-1个过程的直接调用
 
 <font color="red">**对于编译问题**</font>：图的节点就是符号寄存器，若两个符号寄存器同时“生存”在同一程序段，则相应的两个节点同一条边连接起来表示相关。尝试用n中颜色给图上色，n是指真实寄存器的数目。**如果这个问题无法成功，那么这些不能上色的节点必须放入存储器**中，当需要时必须使用装载和保存操作开辟寄存器空间。
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211119103322765.png" alt="image-20211119103322765" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704531.png" alt="image-20211119103322765" style="zoom:80%;" />
 
 ## 13.4 精简指令集架构
 
@@ -276,7 +276,7 @@ N个窗口的寄存器组仅能用于N-1个过程的直接调用
 >
 > D：存储
 
-![image-20211119105438478](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211119105438478.png)
+![image-20211119105438478](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704529.png)
 
 NOOP：编译器加的，防止数据冲突或不相关的指令执行
 
@@ -290,7 +290,7 @@ NOOP：编译器加的，防止数据冲突或不相关的指令执行
 
 将在转移指令后，插入的用来减小转移损失的这些指令称为**延迟槽delay slot**
 
-![](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211119112906692.png)
+![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704530.png)
 
 #### 循环展开
 

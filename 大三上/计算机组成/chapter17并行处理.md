@@ -47,17 +47,17 @@
 
 > 流水线和超级流水线都是SISD，超标量不是
 
-![image-20211201112729421](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201112729421.png)![image-20211201112918660](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201112918660.png)
+![image-20211201112729421](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704557.png)![image-20211201112918660](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704558.png)
 
 :o: **单指令多数据（SIMD）流**：一条机器指令控制几个处理部件基于锁步方式同时执行，每个处理部件有一个相关的数据存储器，故每条指令在不同的数据组上执行。17.7 节讨论的向量和阵列处理器属于这一类。
 
 > 不同的数据处理相同的操作
 
-![image-20211201112750754](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201112750754.png)
+![image-20211201112750754](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704559.png)
 
 :o: **多指令单数据（MISD）流**：一系列数据被发送到一组处理器，每个处理器执行不同的指令序列。这种结构从来没有在商业上被实现过。
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201112822380.png" alt="image-20211201112822380" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704563.png" alt="image-20211201112822380" style="zoom:67%;" />
 
 :o: **多指令多数据（MIMD）流**：**一组处理器同时执行不同的指令序列，对不同的数据集进行操作**。SMP、集群系统和NUMA系统都属于这一类。
 
@@ -65,11 +65,11 @@
 >
 > NUMA：紧耦合	松耦合：集群系统
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201113209167.png" alt="image-20211201113209167" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704565.png" alt="image-20211201113209167" style="zoom:50%;" />
 
 
 
-![image-20211201112520208](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201112520208.png)
+![image-20211201112520208](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704560.png)
 
 ## 17.2 对称多处理器Symmetric Multiprocessors
 
@@ -98,7 +98,7 @@ SMP的操作系统可以跨越所有处理器来调度进程或线程，具有�
 > 
 >**可扩展（scaling）**：厂商能提供一个产品范围，它们基于系统中配置的处理器数目不同而有不同的价格和性能特征。
 
-![image-20211201115312397](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211201115312397.png)
+![image-20211201115312397](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704561.png)
 
 ### 组织
 
@@ -134,7 +134,7 @@ SMP的操作系统可以跨越所有处理器来调度进程或线程，具有�
 
 每个处理器或I/O模块直接、独立地访问内存模块，几乎不需要修改处理器或I/O模块，但是需要逻辑去解决冲突
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211203101914901.png" alt="image-20211203101914901" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704566.png" alt="image-20211203101914901" style="zoom:50%;" />
 
 对于CPU在不同端口的优先级的设置一般也不同，否则会使各个CPU的地位不均等
 
@@ -247,7 +247,7 @@ Cache一致性问题cache coherence：由于主存中同一数据的多个副本
 > 相当于一台计算机：维护成本高
 > 需要有Cluster操作系统
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211203105027919.png" alt="image-20211203105027919" style="zoom: 43%;" /><img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211203105145265.png" alt="image-20211203105145265" style="zoom: 43%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704567.png" alt="image-20211203105027919" style="zoom: 43%;" /><img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704568.png" alt="image-20211203105145265" style="zoom: 43%;" />
 
 ### 优点
 
@@ -289,7 +289,7 @@ Cache一致性问题cache coherence：由于主存中同一数据的多个副本
 
 NUMA可以补偿上述限制
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211203111457407.png" alt="image-20211203111457407" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704569.png" alt="image-20211203111457407" style="zoom:67%;" />
 
 对于NUMA中的每一个CPU，可以看到统一的大内存
 
@@ -311,7 +311,7 @@ NUMA可以补偿上述限制
 
 没有Cache一致性维护的NUMA系统或多或少等同于集群系统
 
-![image-20211227174345953](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227174345953.png)
+![image-20211227174345953](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704562.png)
 
 > 多个独立的结点通过某种通信网络互连
 >

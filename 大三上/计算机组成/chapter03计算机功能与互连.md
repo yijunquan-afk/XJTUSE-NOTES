@@ -1,5 +1,3 @@
-[TOC]
-
 # 第三章 计算机功能与互连(总线)
 
 ## key points
@@ -22,7 +20,6 @@
 
 ## 3.1 计算机的功能
 
-![image-20211006210923957](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211006210923957.png)
 
 计算机的基本功能是**执行程序(指令序列)**，以完成特殊任务
 
@@ -35,8 +32,7 @@ CPU是执行指令的组件
 > > 读取指令：取指周期
 > >
 > > 执行指令：执行周期
-
-![image-20211006211008841](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211006211008841.png)
+> > ![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/b3d8aa89d8b54fa0a35c14e57475465f.png)
 
 ### 3.1.1 指令的读取与执行
 
@@ -51,11 +47,8 @@ CPU是执行指令的组件
 
 **举例说明**，使用一台包含下图所列特点的假想机器，其处理器包含唯一的一个数据寄存器，被称为累加器(AC); 其指令和数据都是16位长，这样便于用16位的字来组织存储器;其指令格式提供4位的操作码，表示最多可以有2* 4= 16种不同的操作码，最多有21=
 4096(4K)个字的存储器可以直接寻址。下面说明部分程序的执行，显示了存储器和处理器寄存器的相关部分
-
-![image-20211006214448269](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211006214448269.png)
-
-![image-20211006214526703](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211006214526703.png)
-
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/602e0aed12284bf6a7c2cd82666b0b10.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/405356687d094ef088753f5eaf62863b.png)
 :one: 程序计数器(PC) 的内容是300，即第1条指令的地址。这条指令(其值为十六进制数1940)被装入指令寄存器IR并且PC加1。注意,为简便起见，忽略对存储器地址寄存器(MAR) 和存储器缓冲寄存器(MBR)的使用
 
 :two: **IR中的前4位(第1个十六进制数字)指出要装入累加器(AC)，而其余12位(3个十六进制数字)指定从那个地址(940) 取数据装载**。即地址940的数据0003装人AC。
@@ -79,8 +72,7 @@ CPU是执行指令的组件
 :five: **取操作数(Operand fetch)**:从存储器或从I/0中读取操作数。
 :six: **数据操作(Data operation)**: 完成指令需要的操作。
 :seven: **存储操作数(Operand storage)**: 将结果写人存储器或输出到I/O。
-
-![image-20211008082704428](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008082704428.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/f5eb07f534be48a0b9889674dd7d5197.png)
 
 ### 3.1.2中断
 
@@ -89,14 +81,14 @@ CPU是执行指令的组件
 **目的**：提升CPU的效率；允许CPU处理紧急事件
 
 **中断的分类**
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/770cc4363e414afab56cafa22c5ad487.png)
 
-![image-20211008083912276](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008083912276.png)
+下图说明了事件的这种状态。用户程序执行一系列WRITE调用，WRITE调用与处理过程
+交错进行。代码段1、2、3是指不包含I/O操作的指令序列。WRITE 调用是对一段I/0程序的调
+用，它是执行实际I/0操作的系统实用程序。
 
-
-
-用户程序执行一系列WRITE调用，WRITE调用与处理过程交错进行。代码段1、2、3是指不包含I/O操作的指令序列。WRITE 调用是对一段I/0程序的调用，它是执行实际I/0操作的系统实用程序。
-
-![image-20211008084035288](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008084035288.png)这段I/0程序包含以下三个部分:
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/3bfffcd7ce9a4408b04b3a918ad07fd1.png)
+这段I/0程序包含以下三个部分:
 
 :one: 用于为实际I/O操作**准备的指令序列**，在图中标记为4。它可能包括将待输出数据复制到专用的缓冲区，以及为设备命令准备参数。
 
@@ -110,16 +102,16 @@ CPU是执行指令的组件
 
 当外部设备准备好接收服务，外部设备的I/O模块发送中断请求信号给处理器。处理器通过挂起当前程序的操作，**跳转**服务于某个特定I/O设备的程序来响应，这个程序被称为**中断处理程序**，并且在设备服务完后恢复原来的执行。中断发生的断点在上图中用星号(*)表示。
 
-为适应中断，将中断周期加人指令周期中，如下图所示。在中断周期中，处理器检查是否发生了中断，这将由中断请求信号的出现来指示。如果没有中断请求，则处理器继续进入取指周期，读取当前程序的下一条指令。如果出现中断请求，则处理器执行以下操作:
+为适应中断，将中断周期加人指令周期中，如下图所示。在中断周期中，处理器检查是否发生了
+中断，这将由中断请求信号的出现来指示。如果没有中断请求，则处理器继续进入取指周期，读取当前程序的下一条指令。如果出现中断请求，则处理器执行以下操作:
 
 > ●挂起当前正在执行的程序，并保存其状态。保存下一条即将执行的指令的地址以及任何与处理器当前活动相关的数据。
 > ●将程序计数器设置为中断处理程序的起始地址。
 
-![image-20211008085637025](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008085637025.png)
-
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/897544602bea41feaddb9c3a48fa4529.png)
 加入了中断周期处理的指令周期状态图如下：
 
-![image-20211008090017119](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008090017119.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/a94a5e5b17dc41b8a06031e8d244ed48.png)
 
 ##### 2、多重中断
 
@@ -131,13 +123,9 @@ CPU是执行指令的组件
 
 禁止中断就是在中断处理过程中禁止其他中断，此时的中断严格按照顺序处理，等一个中断处理完成以后不用等到用户程序恢复就可以再次允许中断
 
-**优点**是简单有效，中断严格按顺序处理	**缺点**是没有考虑到相对的优先级和时间紧迫的需要
-
-![image-20211008090902982](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008090902982.png)
-
-![image-20211008090937471](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008090937471.png)
-
-:two: 定义优先级(define priorities)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/1b44dcac4b464c3da365e73672b085e9.png)
+![:two: 定义优先级(de](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/57bf22d6ed664592b01b04bd52d556f4.png)
+f
 
 第二种处理多重中断的方法就是定义中断的优先级，允许优先级高的中断引起低级中断处理程序本身被中断
 
@@ -152,10 +140,8 @@ CPU是执行指令的组件
 **四、**当通信ISR完成时(1=25), 原来的处理器的状态恢复，即执行原来的打印机ISR。但是在这一例程中的一条指令都没有来得及执行以前，处理器响应优先级更高的磁盘中断，将控制权传送给磁盘ISR。
 
 **五、**仅当这一例程结束后(1=35)， 打印机的ISR才恢复。在它完成后(t=40),控制权才最终交还给用户程序。
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/b165ddcc377b4ed696a02259962e4c2a.png)
 
-![image-20211008091909635](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008091909635.png)
-
-优缺点与禁止中断相对
 
 ## 3.2 计算机的互连结构
 
@@ -164,9 +150,7 @@ CPU是执行指令的组件
 **互连结构**：连接各个模块的通路
 
 不同设备的主要输入输出所需信息交换的种类如下：
-
-![image-20211008092749780](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211008092749780.png)
-
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/11555addbdc84f398cce863c902338ac.png)
 由上图可知，互连结构必须支持下列类型的传送
 
 存储器到处理器、处理器到存储器、I/O到处理器、处理器到I/O、I/O与存储器之间(可以使用**DMA**直接存储器来实现)
@@ -184,8 +168,8 @@ CPU是执行指令的组件
 **系统总线**是指CPU、主存、I/0设备(通过I/0接口)各大部件之间的信息传输线。
 
 按系统总线传输信息不同，可分为3类:**数据总线、地址总线和控制总线。**
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/0c7ae5794551424eb55833dfa1f3dfff.png)
 
-![image-20211010194138989](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010194138989.png)
 
 :one: **数据总线**: 数据总线是用来传输个功能部件之间的数据信息，它是**双向**传输总线，其位数与机器字长、存储字长有关，一般为 8位、16位或32位。
 
@@ -210,7 +194,7 @@ CPU是执行指令的组件
 #### 2、总线的物理结构
 
 从物理上讲，系统总线实际上是多条平行的电导线。这些导线是在卡或板(印刷电路板).上刻出来的金属线。总线延伸至所有系统部件，每一个系统部件都连接到总线的全部或部分线
-![image-20211010215409021](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010215409021.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/69e236d9a3bd44fb8af08d81967b8239.png)
 
 #### 3、多总线层次结构|Multiple-bus Hierarchies
 
@@ -221,14 +205,13 @@ CPU是执行指令的组件
 :two: 当聚集的传输请求接近总线容量时，总线就会成为瓶颈
 
 所以，大多数计算机都使用多总线层次结构
-
-![image-20211010220431269](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010220431269.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/b2d4d34bc83440c2b29f8d18599b4453.png)
 
 高速总线使高需求的设备和处理器有更紧密的集成，同时有独立于处理器
 
 ### 3.2.3 总线的设计要素
 
-![image-20211010220930233](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010220930233.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/6b946c4dc51b4855a41c91f39897a04d.png)
 
 #### 1、总线类型
 
@@ -255,8 +238,8 @@ CPU是执行指令的组件
 > 计数器定时查询方式优先级设置较灵活，对故障不敏感，连线及控制过程较复杂;
 >
 > 独立请求方式速度**最快**，但硬件器件用量大，连线多，成本较高。
+> ![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/65fb113ebb3a4b75a6e6ee94379195ec.png)
 
-![image-20211010224020126](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010224020126.png)
 
 **分布式**：没有中央控制器，每一个模块中包含有访问控制逻辑，分享总线
 
@@ -276,7 +259,8 @@ CPU是执行指令的组件
 >
 > 容易实现但是不灵活
 
-![image-20211010230012437](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010230012437.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/69d085b76de84dcda2de2d1d48e649d7.png)
+
 
 **异步时序**：总线上一个事件的发生取决于前一个事件的发生
 
@@ -284,7 +268,8 @@ CPU是执行指令的组件
 >
 > **缺点**：实现复杂
 
-![image-20211010231049239](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010231049239.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/ad4325e336e54cd1b886b5ce69f55e57.png)
+
 
 **半同步通信** 
 
@@ -304,13 +289,13 @@ CPU是执行指令的组件
 
 **总线宽度**： 数据总线的宽度对系统性能有影响，单位：bit 
 
-​					地址总线的宽度对系统容量有影响，单位：bit
+					地址总线的宽度对系统容量有影响，单位：bit
 
 **总线带宽**：总线的传输速率，单位：b/s
 
 #### 5、数据传输类型
 
-![image-20211010233340372](C:\Users\26969\AppData\Roaming\Typora\typora-user-images\image-20211010233340372.png)
+![在这里插入图片描述](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img5/8eda828d8b974d19956cb8a32b58801f.png)
 
 ## 3.3 PCI
 

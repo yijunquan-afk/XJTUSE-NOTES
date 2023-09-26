@@ -40,17 +40,17 @@
 
 
 
-![image-20211208101405904](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211208101405904.png)
+![image-20211208101405904](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704570.png)
 
-![image-20211208101528637](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211208101528637.png)
+![image-20211208101528637](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704571.png)
 
-![image-20211208102437894](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211208102437894.png)
+![image-20211208102437894](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704572.png)
 
 只有到多核以后，硬件上才真正支持多核
 
 ### 多核框架
 
-![image-20211208103209678](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211208103209678.png)
+![image-20211208103209678](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704574.png)
 
 #### 共享二级cache优点
 

@@ -24,7 +24,7 @@
 
 > 立即寻址、直接寻址、间接寻址、寄存器寻址、寄存器间接寻址、偏移寻址、栈寻址
 >
-> ![](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226175452859.png)
+> ![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704496.png)
 
 符号说明：
 
@@ -58,7 +58,7 @@
 >
 > 设置可变的初始值
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110102926350.png" alt="image-20211110102926350" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704499.png" alt="image-20211110102926350" style="zoom:50%;" />
 
 ### 直接寻址|Direct Addressing
 
@@ -78,7 +78,7 @@
 
 地址空间有限
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110102907461.png" alt="image-20211110102907461" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704500.png" alt="image-20211110102907461" style="zoom:50%;" />
 
 ### 隐含寻址implicit addressing
 
@@ -98,7 +98,7 @@
 >
 >  将内存内容地址 A 指向累加寄存器的地址内容加载
 
-![image-20220220165503948](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20220220165503948.png)
+![image-20220220165503948](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704498.png)
 
 优点
 
@@ -126,7 +126,7 @@
 
 > register int i,j;
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226193949572.png" alt="image-20211226193949572" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704501.png" alt="image-20211226193949572" style="zoom:67%;" />
 
 ### 寄存器间接地址register indirect addressing
 
@@ -134,7 +134,7 @@
 
 EA=(R)
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110104547873.png" alt="image-20211110104547873" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704502.png" alt="image-20211110104547873" style="zoom:50%;" />
 
 ### 偏移寻址displacement addressing
 
@@ -154,7 +154,7 @@ EA=(R)
 >
 > 反之亦可
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110104836847.png" alt="image-20211110104836847" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704503.png" alt="image-20211110104836847" style="zoom:50%;" />
 
 分为：相对寻址、基址寄存器寻址、变址
 
@@ -182,7 +182,7 @@ A=base	R=displacement	EA=A+R
 
 通常适用于数组或循环
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211110105542137.png" alt="image-20211110105542137" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704504.png" alt="image-20211110105542137" style="zoom:50%;" />
 
 包括后变址和前变址
 
@@ -202,7 +202,7 @@ SP寄存器指向栈顶
 
 对存储器中栈的访问实际属于寄存器间接寻址
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211226194752996.png" alt="image-20211226194752996" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704505.png" alt="image-20211226194752996" style="zoom:67%;" />
 
 > 硬栈：寄存器
 >

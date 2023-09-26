@@ -20,7 +20,7 @@ MIPS\ rate = \frac{I_c}{T\times10^6}=\frac{f}{CPI\times10^6}
 $$
 每秒数百万个浮点指令(MFLOPS)
 
-![image-20211224163020509](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211224163020509.png)
+![image-20211224163020509](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704678.png)
 
 
 
@@ -57,7 +57,7 @@ $$
 **举例说明**，使用一台包含下图所列特点的假想机器，其处理器包含唯一的一个数据寄存器，被称为累加器(AC); 其指令和数据都是16位长，这样便于用16位的字来组织存储器;其指令格式提供4位的操作码，表示最多可以有2* 4= 16种不同的操作码，最多有21=
 4096(4K)个字的存储器可以直接寻址。下面说明部分程序的执行，显示了存储器和处理器寄存器的相关部分
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211006214526703.png" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704699.png" style="zoom: 67%;" />
 
 
 
@@ -107,13 +107,13 @@ $$
 
 主存中的块j和cache中的行i有如下直接映射关系：$i=j\ mode\ m$，其中m为cache的行数
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031211207313.png" alt="image-20211031211207313"  />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704700.png" alt="image-20211031211207313"  />
 
 **直接映射的实现**
 
 存储器的地址会被分为三部分：
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211008104318843.png" alt="image-20211008104318843" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704701.png" alt="image-20211008104318843" style="zoom:80%;" />
 
 低位是字内容；
 
@@ -123,9 +123,9 @@ $$
 
 tag域位数是用block域位数减去line域位数算出来的，不是直接分配
 
-![image-20211228105041050](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211228105041050.png)
+![image-20211228105041050](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704679.png)
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031210959717.png" alt="image-20211031210959717" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704702.png" alt="image-20211031210959717" style="zoom:67%;" />
 
 <font color="red">**总结如下**</font>
 
@@ -157,7 +157,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 **全关联映射允许每一个主存块装入cache中的任意行，此时只需要用标记位表示一个主存块。**
 
-![image-20211031212059064](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031212059064.png)
+![image-20211031212059064](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704680.png)
 
 为了确认某一块是否在cache中，需要对每一行中的标记进行搜寻检查。**地址中无对应行号的字段**
 
@@ -175,7 +175,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 >
 > 标记长度tag=s位
 
-![image-20211228105734907](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211228105734907.png)
+![image-20211228105734907](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704681.png)
 
 **优点**：映射灵活，**命中率最高**
 
@@ -195,11 +195,11 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 这被称为k路组关联映射。采用组关联映射，块$B_0$能够映射到组j的任意行中。在全相联映射中，每一个字映射到多个cache行中。而对于组相联映射，每一个字映射到特定一组的所有cache 行中，于是，主存中的$B_0$块映射到第0组，如此等等。因此，组相联映射cache在物理上是使用了v个全关联映射的cache。同时，它也可看作为k个直接映射的cache的同时使用，如图4-13b所示。每一个直接映射的cache称为路，包括0个cache行。主存中首v个块分别映射到每路的v行中，接下来的v个块也是以同样的方式映射，后面也如此。直接映射一般应用于轻度关联(h 值较小)的情况，而全相联映射应用于高度关联的情况。
 
-![image-20211228110925510](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211228110925510.png)
+![image-20211228110925510](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704683.png)
 
-![image-20211013101411998](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211013101411998.png)
+![image-20211013101411998](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704685.png)
 
-![image-20211031212735041](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031212735041.png)
+![image-20211031212735041](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704686.png)
 
 <font color="red">**总结如下**</font>
 
@@ -244,7 +244,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 >
 > ​	  :three: 画出地址表示图如下：
 >
-> ![image-20211031214826303](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031214826303.png)
+> ![image-20211031214826303](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704687.png)
 >
 > 2）首先要明确一点：<font color="red">只有在第一遍访问时才会存在未命中情况</font>，那么我们就需要计算第一次有多少个字没有命中。
 > 当出现一次未命中时，主存就会把对应块上的数据传送到Cache中，那么我们只需要计算出第一遍遍历中主存向Cache传送了多少次数据，就可以得到未命中的次数.100个字需要100/8=13个块。那么第一遍便利的时候主存需要向Cache传送13次数据，也就是说有13次未命中。全部过程访问8x100=800次，未命中13次，则命中率为(800-13)/800=98.375%
@@ -269,7 +269,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 > 对于两路组相联，这种方法很容易实现，每行包含一个USE位。当某行被引用时，其USE位被置为1,而这一组中另一行的USE位被置为0。当把块读入到这一组中时，就会替换掉USE位为0的行。由于我们假定越是最近使用的存储单元越有可能将被访问，因此，LRU会给出最佳的命中率。对于全相联cache, LRU也相对容易实现。高速缓存机制会为cache中的每行保留一个 单独的索引表。当某一行被访问时，它就会移动到表头，而在表尾的行将被替换掉
 
-![image-20211013112446355](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211013112446355.png)
+![image-20211013112446355](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704688.png)
 
 **First in first out**：先进先出，替换掉在cache中停留时间最长的块
 
@@ -277,7 +277,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 **Random**：性能与LRU几乎差不多，没有用到访存的局部性原理，所以不能提高cache的命中率
 
-![image-20211031215824626](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211031215824626.png)
+![image-20211031215824626](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704689.png)
 
 ## 题型七、存储器扩充
 
@@ -291,7 +291,7 @@ tag域位数是用block域位数减去line域位数算出来的，不是直接�
 
 :one: <font color="red">1kx4 -> 1kx8   字长扩展（位扩展）</font>
 
-![image-20211015114337344](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015114337344.png)
+![image-20211015114337344](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704690.png)
 
 CS：选中信号端	A0~An：地址线	D0~Dn：数据线	WE读写信号线
 
@@ -299,7 +299,7 @@ CS：选中信号端	A0~An：地址线	D0~Dn：数据线	WE读写信号线
 
 :two: <font color="red">1kx8-> 2kx8  字数扩展</font>
 
-![image-20211015114413227](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015114413227.png)
+![image-20211015114413227](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704692.png)
 
 需要片选信号线区分不同的芯片，高位做片选比较方便
 
@@ -307,7 +307,7 @@ CS：选中信号端	A0~An：地址线	D0~Dn：数据线	WE读写信号线
 
 先1kx4->1kx8再1kx8->4kx8
 
-![image-20211015114901716](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211015114901716.png)
+![image-20211015114901716](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704693.png)
 
 2-4译码器保证了每一次只有一个芯片有效
 
@@ -355,15 +355,15 @@ CS：选中信号端	A0~An：地址线	D0~Dn：数据线	WE读写信号线
 >
 > rol. Now, we have following chips:
 >
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102150030853.png" alt="image-20211102150030853" style="zoom:50%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704704.png" alt="image-20211102150030853" style="zoom:50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102150425367.png" alt="image-20211102150425367" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704705.png" alt="image-20211102150425367" style="zoom:50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102150446877.png" alt="image-20211102150446877" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704706.png" alt="image-20211102150446877" style="zoom: 50%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211020102942584.png" alt="image-20211020102942584" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704708.png" alt="image-20211020102942584" style="zoom:67%;" />
 
-![image-20211225200228497](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211225200228497.png)
+![image-20211225200228497](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704695.png)
 
 ## 题型八、磁盘的性能指标计算
 
@@ -399,7 +399,7 @@ $T_s$是平均寻道时间
 情况1：序列组织。
 情况2：数据随机分布
 
-![](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211225214718357.png)
+![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704696.png)
 
 所以要使用顺序存取策略
 
@@ -435,7 +435,7 @@ $T_s$是平均寻道时间
 
 
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102212810682.png" alt="image-20211102212810682" style="zoom:150%;float:left" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704709.png" alt="image-20211102212810682" style="zoom:150%;float:left" />
 
 **解答**
 
@@ -443,7 +443,7 @@ $T_s$是平均寻道时间
 
 
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211102215933248.png" alt="image-20211102215933248" style="zoom:110%;float:left" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704711.png" alt="image-20211102215933248" style="zoom:110%;float:left" />
 
 **解答**
 
@@ -528,7 +528,7 @@ $n>>k，T_p\thickapprox T_{pmax}$
 
 如果指令4是一个条件转移指令，并且转移的目标是指令7。在此执行中，结果是进行分支。绘制流水线各功能阶段时序图，计算提速和吞吐量。假设在指令8之后，没有其他指令要执行。
 
-![](https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20220220180233871.png)
+![](https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704697.png)
 
 ## 题型十一、指令周期的微操作描述
 
@@ -554,9 +554,9 @@ $n>>k，T_p\thickapprox T_{pmax}$
 
 **符号化表示**
 
-> <img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227120136938.png" alt="image-20211227120136938" style="zoom:67%;" />
+> <img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704713.png" alt="image-20211227120136938" style="zoom:67%;" />
 
-<img src="https://note-image-1307786938.cos.ap-beijing.myqcloud.com/typora/qshell/image-20211227120158046.png" alt="image-20211227120158046" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/yijunquan-afk/img-bed-1/main/img2/1695704714.png" alt="image-20211227120158046" style="zoom:67%;" />
 
 微操作的分组必须遵守下面两个简单的原则:
 
