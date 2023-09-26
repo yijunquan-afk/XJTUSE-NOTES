@@ -90,7 +90,7 @@ void DDALine(int x0,int y0,int x1,int y1,int color)
 $$
 d=F(M)=F(x_p+1,y_p+0.5)=a(x_p+1)+b(y_p+0.5)+c\\
 
-其中a=y_0-y_1, b=x_1-x_0, c=x_0y_1-x_1y_
+其中a=y_0-y_1, b=x_1-x_0, c=x_0y_1-x_1y_1
 $$
 
 > 当d<0，M在L(Q点)下方，取右上方P2为下一个象素
